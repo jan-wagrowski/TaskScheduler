@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "seVt+DFVvTrL8TchhG3oOAdY2dSsmm2RwyiwtMoWc0mH4vrj0GXWIecD3miwWJCU1jv7N2UswmOw17yXpxP6Ng==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Maciek\\source\\repos\\TaskScheduler\\TaskScheduler\\TaskScheduler.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Maciek\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}
