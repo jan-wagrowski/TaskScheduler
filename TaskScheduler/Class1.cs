@@ -1,37 +1,30 @@
-﻿using System;
-using System.Linq;
-using CsvHelper;
-using System.IO;
-using System.Globalization;
-using CsvHelper.Configuration;
-
-namespace TaskScheduler
+﻿namespace TaskScheduler
 {
-    internal class Class1
+    using System;
+    using System.Globalization;
+    using System.IO;
+    using System.Linq;
+    using CsvHelper;
+    using CsvHelper.Configuration;
+
+    internal class TaskScheduler
     {
-        public static void Main(string [] args)
+        public static void Main(string[] args)
         {
-            using (var steamReader = new StreamReader(@"C:\Users\Maciek\Desktop\Zeszyt1.csv"))
+            using (var reader = new StreamReader("./FirstEmptyDateSlot.csv", System.Text.Encoding.UTF8))
             {
                 var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture)
                 {
-                    Delimiter = ";"
+                    Delimiter = ";",
                 };
 
-                using (var csvReader = new CsvReader(steamReader, csvConfig))
+                using (var csvReader = new CsvReader(reader, csvConfig))
                 {
                     var records = csvReader.GetRecords<Task>();
+
+                    var rekord = new List<Task>(records);
                 }
             }
-            
         }
-
-
     }
-}
-
-public class Task
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
 }
