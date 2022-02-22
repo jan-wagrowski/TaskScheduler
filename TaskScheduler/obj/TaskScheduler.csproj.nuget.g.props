@@ -13,8 +13,4 @@
     <SourceRoot Include="C:\Users\Maciek\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
-  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgStyleCop_Analyzers Condition=" '$(PkgStyleCop_Analyzers)' == '' ">C:\Users\Maciek\.nuget\packages\stylecop.analyzers\1.1.118</PkgStyleCop_Analyzers>
-    <PkgSonarAnalyzer_CSharp Condition=" '$(PkgSonarAnalyzer_CSharp)' == '' ">C:\Users\Maciek\.nuget\packages\sonaranalyzer.csharp\8.35.0.42613</PkgSonarAnalyzer_CSharp>
-  </PropertyGroup>
 </Project>

@@ -1,30 +1,37 @@
-﻿namespace TaskScheduler
-{
-    using System;
-    using System.Globalization;
-    using System.IO;
-    using System.Linq;
-    using CsvHelper;
-    using CsvHelper.Configuration;
+﻿using System;
+using System.Linq;
+using CsvHelper;
+using System.IO;
+using System.Globalization;
+using CsvHelper.Configuration;
 
-    internal class TaskScheduler
+namespace TaskScheduler
+{
+    internal class Class1
     {
-        public static void Main(string[] args)
+        public static void Main(string [] args)
         {
-            using (var reader = new StreamReader("./FirstEmptyDateSlot.csv", System.Text.Encoding.UTF8))
+            using (var steamReader = new StreamReader(@"C:\Users\Maciek\Desktop\Zeszyt1.csv"))
             {
                 var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture)
                 {
-                    Delimiter = ";",
+                    Delimiter = ";"
                 };
 
-                using (var csvReader = new CsvReader(reader, csvConfig))
+                using (var csvReader = new CsvReader(steamReader, csvConfig))
                 {
                     var records = csvReader.GetRecords<Task>();
-
-                    var rekord = new List<Task>(records);
                 }
             }
+            
         }
+
+
     }
+}
+
+public class Task
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
 }
