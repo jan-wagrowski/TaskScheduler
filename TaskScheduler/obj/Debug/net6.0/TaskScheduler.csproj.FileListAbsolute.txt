@@ -15,3 +15,4 @@ C:\Users\Maciek\source\repos\TaskScheduler\TaskScheduler\obj\Debug\net6.0\TaskSc
 C:\Users\Maciek\source\repos\TaskScheduler\TaskScheduler\obj\Debug\net6.0\TaskScheduler.genruntimeconfig.cache
 C:\Users\Maciek\source\repos\TaskScheduler\TaskScheduler\bin\Debug\net6.0\CsvHelper.dll
 C:\Users\Maciek\source\repos\TaskScheduler\TaskScheduler\obj\Debug\net6.0\TaskScheduler.csproj.CopyComplete
+C:\Users\Maciek\source\repos\TaskScheduler\TaskScheduler\bin\Debug\net6.0\FirstEmptyDateSlot.csv

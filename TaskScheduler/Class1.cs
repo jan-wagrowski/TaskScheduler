@@ -7,11 +7,11 @@ using CsvHelper.Configuration;
 
 namespace TaskScheduler
 {
-    internal class Class1
+    internal class TaskScheduler
     {
         public static void Main(string [] args)
         {
-            using (var steamReader = new StreamReader(@"C:\Users\Maciek\Desktop\Zeszyt1.csv"))
+            using (var steamReader = new StreamReader("./FirstEmptyDateSlot.csv"))
             {
                 var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture)
                 {
@@ -21,17 +21,13 @@ namespace TaskScheduler
                 using (var csvReader = new CsvReader(steamReader, csvConfig))
                 {
                     var records = csvReader.GetRecords<Task>();
+
+                    var rekord = new List<Task>(records);
+
                 }
             }
-            
         }
 
 
     }
-}
-
-public class Task
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
 }
