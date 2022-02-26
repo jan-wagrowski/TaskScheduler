@@ -9,25 +9,11 @@ namespace TaskScheduler
 {
     internal class TaskScheduler
     {
-        public static void Main(string [] args)
+        public static void Main(string[] args)
         {
-            using (var steamReader = new StreamReader("./FirstEmptyDateSlot.csv"))
-            {
-                var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture)
-                {
-                    Delimiter = ";"
-                };
+            var recordList = Task.Reader();
 
-                using (var csvReader = new CsvReader(steamReader, csvConfig))
-                {
-                    var records = csvReader.GetRecords<Task>();
-
-                    var rekord = new List<Task>(records);
-
-                }
-            }
+            Task.writer(recordList);
         }
-
-
     }
 }
