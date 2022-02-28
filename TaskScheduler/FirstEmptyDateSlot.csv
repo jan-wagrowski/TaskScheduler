@@ -1,18 +1,18 @@
-ID;Priority;Description;Predecessors;Work;Responsible;MinStartDate;MaxEndDate
-1;;Za≥Ûø repozytorium na GitHub --> wyslij mi namiary na to Repo;;2;MK;01.01.2022;12.31.2022
-2;;ZrÛb szkolenie dotyczπce GITa -->††Learn Git Branching;;2;MK;01.01.2022;12.31.2022
-3;;UtwÛrz projekt w VS;;2;MK;01.01.2022;12.31.2022
-4;;Zapisz projekt w repo;;3;MK;01.01.2022;12.31.2022
-5;;Zaimplementuj uzycie csv zgodnie z ustaleniami;;3;MK;01.01.2022;12.31.2022
-5,1;;Zapisywanie pliku CSV;6;4;KT;01.01.2022;12.31.2022
-5,2;;£adowanie pliku CSV;5.1, 6;3;MK;01.01.2022;12.31.2022
-5,3;;Obliczenia StartDate;;;;01.01.2022;12.31.2022
-5.3.1;;Weü pod uwage Resposible;;2;MK;01.01.2022;12.31.2022
-5.3.2;2;Weü pod uwage Precedessors;;3;KT;01.01.2022;12.31.2022
-5.3.3;;Weü pod uwage Priorities;;4;MK;01.01.2022;12.31.2022
-5.3.4;1;Weü pod uwage MinStartDate;;5;KT;01.01.2022;12.31.2022
-5.3.5;;Weü pod uwag MaxEndDate;;5;MK;01.01.2022;12.31.2022
-5.3.6;;Weü pod uwagÍ hierarchie ID;;3;KT;01.01.2022;12.31.2022
-5,4;;Obliczenia EndDate;;3;MK;01.01.2022;12.31.2022
-6;;Pobierz nuget csvHelper;;3;MK;01.01.2022;12.31.2022
-7;;Napisz Testy ;;4;KT;01.01.2022;12.31.2022
+ID;Priority;Description;Predecessors;Work;Responsible;MinStartDate;MaxEndDate;StartDate
+1;;TEST --> wyslij mi namiary na to Repo;;2;MK;01.01.2022;12.31.2022;12.31.2022
+2;;Zr√≥b szkolenie dotyczƒÖce GITa -->¬†¬†Learn Git Branching;;2;MK;01.01.2022;12.31.2022;12.31.2022
+3;;Utw√≥rz projekt w VS;;2;MK;01.01.2022;12.31.2022;12.31.2022
+4;;Zapisz projekt w repo;;3;MK;01.01.2022;12.31.2022;12.31.2022
+5;;Zaimplementuj uzycie csv zgodnie z ustaleniami;;3;MK;01.01.2022;12.31.2022;12.31.2022
+5,1;;Zapisywanie pliku CSV;6;4;KT;01.01.2022;12.31.2022;12.31.2022
+5,2;;≈Åadowanie pliku CSV;5.1, 6;3;MK;01.01.2022;12.31.2022;12.31.2022
+5,3;;Obliczenia StartDate;;;;01.01.2022;12.31.2022;12.31.2022
+5.3.1;;We≈∫ pod uwage Resposible;;2;MK;01.01.2022;12.31.2022;12.31.2022
+5.3.2;2;We≈∫ pod uwage Precedessors;;3;KT;01.01.2022;12.31.2022;12.31.2022
+5.3.3;;We≈∫ pod uwage Priorities;;4;MK;01.01.2022;12.31.2022;12.31.2022
+5.3.4;1;We≈∫ pod uwage MinStartDate;;5;KT;01.01.2022;12.31.2022;12.31.2022
+5.3.5;;We≈∫ pod uwag MaxEndDate;;5;MK;01.01.2022;12.31.2022;12.31.2022
+5.3.6;;We≈∫ pod uwagƒô hierarchie ID;;3;KT;01.01.2022;12.31.2022;12.31.2022
+5,4;;Obliczenia EndDate;;3;MK;01.01.2022;12.31.2022;12.31.2022
+6;;Pobierz nuget csvHelper;;3;MK;01.01.2022;12.31.2022;12.31.2022
+7;;Napisz Testy ;;4;KT;01.01.2022;12.31.2022;12.31.2022

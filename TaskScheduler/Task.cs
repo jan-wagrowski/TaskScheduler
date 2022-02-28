@@ -23,9 +23,12 @@
 
         public DateOnly MaxEndDate { get; set; }
 
+        public DateOnly StartDate { get; set; }
+
+
         public static List<Task> Reader()
         {
-            using (var steamReader = new StreamReader("./FirstEmptyDateSlot.csv"))
+            using (var steamReader = new StreamReader("./FirstEmptyDateSlot.csv", System.Text.Encoding.UTF8))
             {
                 var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture)
                 {
@@ -43,11 +46,10 @@
 
         public static void writer(List<Task> recordlist)
         {
-            using (var writer = new StreamWriter(@"C:\Users\Maciek\Desktop\Zadania.csv"))
+            using (var writer = new StreamWriter(@"C:\Users\Maciek\Desktop\Zadania.csv", true, System.Text.Encoding.UTF8))
             {
                 using (var csvWritter = new CsvWriter(writer, CultureInfo.InvariantCulture))
                 {
-                    csvWritter.Context.RegisterClassMap<TaskMap>();
                     csvWritter.WriteRecords(recordlist);
                 }
             }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TaskScheduler
 {
-    internal class Class2 : Task
+    internal class ResultTask : Task
     {
         public DateTime StartDate { get; set; }
 
