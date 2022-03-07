@@ -12,8 +12,8 @@ namespace TestTaskScheduler
         [TestMethod]
         public void FullProcess()
         {
-            var recordList = Task.Reader();
-            Task.Writer(recordList);
+            var recordList = CsvMethodes.Reader();
+            CsvMethodes.Writer(recordList);
 
             const string originalFile = @"./Reference.csv";
             const string copiedFile = @"C:\Users\Maciek\Desktop\Zadania.csv";
