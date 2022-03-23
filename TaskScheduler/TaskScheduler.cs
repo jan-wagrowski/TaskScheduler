@@ -7,11 +7,13 @@
     using CsvHelper;
     using CsvHelper.Configuration;
 
-    internal class TaskScheduler
+    internal static class TaskScheduler
     {
         public static void Main(string[] args)
         {
-            var list = CsvMethodes.Reader();
+            var listCsv = CsvMethodes.Reader();
+
+            var list = TaskCsv.ToList(listCsv);
 
             var startDateList = AlgorithmMethods.CountStartDate(list);
 

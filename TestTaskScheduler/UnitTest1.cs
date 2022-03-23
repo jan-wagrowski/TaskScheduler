@@ -25,7 +25,7 @@ namespace TestTaskScheduler
 
         }
 
-        public string GetFileHash(string filename)
+        public static string GetFileHash(string filename)
         {
             var hash = new SHA1Managed();
             var clearBytes = File.ReadAllBytes(filename);
@@ -33,7 +33,7 @@ namespace TestTaskScheduler
             return ConvertBytesToHex(hashedBytes);
         }
 
-        public string ConvertBytesToHex(byte[] bytes)
+        public static string ConvertBytesToHex(byte[] bytes)
         {
             var sb = new StringBuilder();
 

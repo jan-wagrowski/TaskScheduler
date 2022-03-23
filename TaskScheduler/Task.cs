@@ -12,7 +12,7 @@
 
         public string? Description { get; set; }
 
-        public string? Predecessors { get; set; }
+        public List<Task> Predecessors { get; set; }
 
         public int? Work { get; set; }
 
@@ -26,7 +26,7 @@
 
         public DateTime? EndDate { get; set; }
 
-        public int CompareTo(Task? other)
+        public int CompareTo(Task other)
         {
             return this.ID.CompareTo(other.ID);
         }

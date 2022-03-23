@@ -9,9 +9,9 @@
     using CsvHelper;
     using CsvHelper.Configuration;
 
-    public class CsvMethodes
+    public static class CsvMethodes
     {
-        public static List<Task> Reader()
+        public static List<TaskCsv> Reader()
         {
             using var steamReader = new StreamReader("./FirstEmptyDateSlot.csv", System.Text.Encoding.UTF8);
             var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture)
@@ -21,8 +21,8 @@
             };
 
             using var csvReader = new CsvReader(steamReader, csvConfig);
-            var records = csvReader.GetRecords<Task>();
-            var rekord = new List<Task>(records);
+            var records = csvReader.GetRecords<TaskCsv>();
+            var rekord = new List<TaskCsv>(records);
             return rekord;
         }
 
