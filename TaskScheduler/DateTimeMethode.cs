@@ -19,8 +19,8 @@
             DateTime max = minStartDate;
             foreach (var date in endDateList)
             {
-                if (DateTime.Compare(date, max) == 1)
-                    max = date;
+                if (DateTime.Compare(date.AddDays((double)1), max) == 1)
+                    max = date.AddDays((double)1);
             }
 
             return max;

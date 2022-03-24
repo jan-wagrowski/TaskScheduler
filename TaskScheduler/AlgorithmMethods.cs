@@ -24,21 +24,20 @@
                     {
                         if (i == 0)
                         {
-                            recordList[i].StartDate = projectStartDate;
-                            recordList[i].EndDate = projectStartDate.AddDays((double)recordList[i].Work.GetValueOrDefault(0)).Date;
+                           //recordList[i].StartDate = projectStartDate;
                         }
                         else
                         {
-                            if (recordList[i].Predecessors.Count == 0)
-                            {
-                                recordList[i].StartDate = recordList[i - 1].StartDate.AddDays((double)recordList[i].Work.GetValueOrDefault(0));
-                            }
-                            else
-                            {
-                                recordList[i].StartDate = DateTimeMethode.Max(recordList[i].MinStartDate, recordList[i].Predecessors);
-                            }
+                            //if (recordList[i].Predecessors.Count == 0)
+                            //{
+                                //recordList[i].StartDate = recordList[i - 1].StartDate.AddDays((double)recordList[i].Work.GetValueOrDefault(0));
+                            //}
+                           // else
+                            //{
+                               // recordList[i].StartDate = DateTimeMethode.Max(recordList[i].MinStartDate, recordList[i].Predecessors);
+                            //}
 
-                            recordList[i].EndDate = recordList[i].StartDate.AddDays((double)recordList[i].Work.GetValueOrDefault(0)).Date;
+                            
                         }
                     }
                 }

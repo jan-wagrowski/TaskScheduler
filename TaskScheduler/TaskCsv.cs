@@ -4,7 +4,7 @@
     using CsvHelper;
     using CsvHelper.Configuration;
 
-    public class TaskCsv
+    public class TaskCsv: IComparable<TaskCsv>
     {
         public TaskCsv()
         {
@@ -30,6 +30,11 @@
 
         public DateTime? EndDate { get; set; }
 
+        public int CompareTo(TaskCsv other)
+        {
+            return this.ID.CompareTo(other.ID);
+        }
+
         public static List<Task> ToList(List<TaskCsv> listCsv)
         {
             var taskList = new Dictionary<string, Task>();
@@ -46,8 +51,6 @@
                     Responsible = listCsv[i].Responsible,
                     MinStartDate = listCsv[i].MinStartDate,
                     MaxEndDate = listCsv[i].MaxEndDate,
-                    StartDate = listCsv[i].StartDate,
-                    EndDate = listCsv[i].EndDate,
                 });
             }
 
@@ -63,8 +66,44 @@
             }
 
             var taskList2 = taskList.Select(task => task.Value).ToList();
-
+            foreach (var task in taskList2)
+            {
+                task.list = taskList2;
+            }
             return taskList2;
+        }
+
+        public static List<TaskCsv> FromList(List<Task> list)
+        {
+            var taskList = new List<TaskCsv>();
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                var p = string.Empty;
+
+
+                foreach (var item in list[i].Predecessors)
+                {
+                    p = p + item.ID + ",";
+                }
+
+
+                taskList.Add(new TaskCsv
+                {
+                    ID = list[i].ID,
+                    Priority = list[i].Priority,
+                    Description = list[i].Description,
+                    Predecessors = p,
+                    Work = list[i].Work,
+                    Responsible = list[i].Responsible,
+                    MinStartDate = list[i].MinStartDate,
+                    MaxEndDate = list[i].MaxEndDate,
+                    StartDate = list[i].StartDate,
+                    EndDate = list[i].EndDate,
+                });
+            }
+
+            return taskList;
         }
     }
 }
